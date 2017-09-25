@@ -1,0 +1,52 @@
+{% extends 'templates/../pages/index.html' %}
+<div>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</div>
+
+{% block content %}
+        <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card-block">
+                <img src="http://www.cmu.edu/academics/images/earth-east-600-min.jpg" class="rounded float-left" alt="..." height="300" width="300" style="padding:10px 10px">
+                <h4 class="card-title text-center">Title </h4>
+                <div class="card-block" style="padding: 5px 10px ">
+                    <p class="small"> Some quick example text to build on the card title
+                            and make up the bulk of the card's content.</p>
+                    <div class="progress bg-black" style="padding: 3px 2px">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width : 60%"></div>
+            <!--    <span class="sr-only"></span> -->
+                    </div>
+                    <div class="row" style="padding: 3px 1px">
+                        <div class="col">
+                            <p class=""style="padding: 1px;margin:0px">100000</p>
+                            <span class="badge badge-pill badge-dark font-weight-normal" style="padding:3px 3px">Our contribution</span>
+                        </div>
+                        <div class="col">
+                        <p style="padding: 1px;margin:0px" >1000000</p>
+                        <span class="badge badge-pill badge-dark font-weight-normal small">Total</span>
+                        </div>
+                    </div>
+
+                    <div class="card-block" style="margin-top:3px; padding: 0px 20px">
+                        <img src="http://www.cmu.edu/academics/images/earth-east-600-min.jpg" class="rounded float-left" alt="..." height="75" width="100">
+                        <h6 class="card-title text-center">Company name </h6>
+                        <div class="card-block">
+                            <h6 class="text-center small">Name Surname </h6>
+                            <h6 class="text-center small">Date </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer text-center" style="background-color: white; padding: 5px 20px">
+                    <a href="#" class="btn btn-primary" >Read about it</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content%}
