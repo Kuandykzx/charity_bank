@@ -1,3 +1,7 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,35 +9,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="../../static/css/temp.css" type="text/css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href={% static "css/block_detail_carousel.css" %} type="text/css">
         <title> Charity Bank</title>
 </head>
 <body>
-        <nav class="navbar navbar-default">
-            <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-3">
-                        <a class="navbar-brand" href="#" style="color:red"><h4>Charity Bank</h4></a>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="nav nav-pills">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" style="color:red">About</a></li>
-                            <li class="nav-item">
-                                <a class="nav-link color-red" href="#" style="color:red">Reports</a></li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" style="color:red">Payment</a></li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" style="color:red">Contact us</a></li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" style="color:red">Find</a></li>
-                        </ul>
-                    </div>
-                </div>
-        </nav>
+
         <!-- HEADER navbar: to finish alignment -->
         <div class="row">
             <div class="col-md-2"></div>
@@ -61,10 +41,9 @@
                         </div>
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <div class="card" style="">
                     <div class="card-block">
-                    <p class="card-text"></p>
                     <h3 class="card-title text-center">VOTE</h3>
                         <div class="text-center"><a href="#" class="btn btn-primary">Other participants</a></div>
                     </div>
@@ -296,31 +275,13 @@
                 </div>
         </div>
         <!-- Requisite      -->
-        <div>
-        <footer class="bg-dark text-white mt-4">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-4"><a class="navbar-brand" href="#"><h4>Charity Bank</h4></a></div>
-                    <div class="col-md-5">
-                        <ul class="nav nav-pills">
-                            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Payment</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
-                        <!-- TWITTER VK FB -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
+
+
         <!-- footer-->
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-        </div>
+
             <!-- JS scripts -->
 </body>
 </html>
+{% endblock content %}
