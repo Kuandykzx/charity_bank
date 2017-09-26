@@ -1,12 +1,12 @@
 
 .carousel-inner .carousel-item-right.active,
 .carousel-inner .carousel-item-next {
-  transform: translateX(33.33%);
+  transform: translateX(16.66%);
 }
 
 .carousel-inner .carousel-item-left.active,
 .carousel-inner .carousel-item-prev {
-  transform: translateX(-33.33%)
+  transform: translateX(-16.66%)
 }
 
 .carousel-inner .carousel-item-right,
