@@ -14,6 +14,7 @@ urlpatterns = [
 
     # User management
     url(r'^users/', include('charity_bank.users.urls', namespace='users')),
+    url(r'^funds/', include('charity_bank.funds.urls', namespace='funds')),
     url(r'^accounts/', include('allauth.urls')),
 
     # Your stuff: custom urls includes go here

@@ -55,6 +55,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     # custom users app
     'charity_bank.users.apps.UsersConfig',
+    'charity_bank.funds.apps.FundsConfig',
     # Your stuff: custom apps go here
 ]
 

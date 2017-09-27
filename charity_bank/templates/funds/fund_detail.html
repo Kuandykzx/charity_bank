@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{%  block content %}
+{% load static i18n %}
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+            <img src="{{ fund.logo.url }}" style="height: 70%;">
+
+        </div>
+
+        <div class="cold-md-6">
+            <h2><br/>{{ fund.title }}</h2>
+            <p> {{ fund.info|linebreaksbr }}</p>
+            <p> Email : {{ fund.email }}</p>
+            <p> Address : {{ fund.address }}</p>
+            <p> Phone Number :{{ fund.phone }}</p>
+        </div>
+    </div>
+{%   endblock content %}

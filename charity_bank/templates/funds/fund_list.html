@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{%  block content %}
+{% load static i18n %}
+
+
+    {% for fund in fund_list %}
+        <div class="row" style="padding-bottom: 5px">
+            <div class="col-sm-12 col-md-3"></div>
+            <div class="col-sm-12 col-md-3">
+            <img class="" src="{{ fund.logo.url }}" style="height: 75%;" alt="">
+
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <h4 class=""><br/>{{ fund.title }}</h4>
+                <p class="">{{fund.info|linebreaksbr}}</p>
+                <a href="{%url "funds:fund_detail" fund.id %}" class="btn btn-primary ">Explore</a>
+                <br/>
+            </div>
+
+
+        </div>
+
+
+    {% endfor %}
+
+{%   endblock content %}
