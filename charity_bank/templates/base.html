@@ -8,72 +8,80 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif] -->
-
-    {% block css %}
     <!-- Latest compiled and minified Bootstrap 4 Alpha 4 CSS -->
-    <link rel="stylesheet" href={% static 'css/bootstrap4.0.0.css' %}>
+    <link rel="stylesheet" href={% static 'css/bootstrap/bootstrap.min.css' %}>
 
     <!-- Your stuff: Third-party CSS libraries go here -->
+    <link rel="stylesheet" href={% static 'css/font-awesome/css/font-awesome.min.css' %}>
+    <link rel="stylesheet" href={% static "css/fonts/stylesheet.css" %}/>
+    <link rel="stylesheet" href={% static 'css/fonts/fonts.css' %} />
+    <link rel="stylesheet" href={% static "css/carousel.css" %} >
+    <link rel="stylesheet" href={% static 'css/animate/animate.min.css' %}>
+
+	<link rel="stylesheet" href={%  static "css/fancybox/jquery.fancybox.css" %}/>
+	<link rel="stylesheet" href={%  static "css/nivo-lightbox/nivo-lightbox.css" %}/>
+	<link rel="stylesheet" href={%  static "css/themes/default/default.css" %}/>
+	<link rel="stylesheet" href={% static "css/owl-carousel/owl.carousel.css" %} />
+	<link rel="stylesheet" href={%  static "css/owl-carousel/owl.theme.css" %} />
+	<link rel="stylesheet" href={%   static "css/owl-carousel/owl.transitions.css"%} >
+
+    <link rel="stylesheet" href={% static 'css/responsive.css' %}>
+  	<link rel="stylesheet" href={% static 'css/style.css' %}>
 
     <!-- This file stores project-specific CSS -->
-    <link href="{% static 'css/project.css' %}" rel="stylesheet">
-
-    {% endblock %}
+   {% block additional_css %} {% endblock %}
 
   </head>
-  <body>
+  <body class="body_example">
 
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <header id="home" class="header">
+		<div class="main_menu_bg navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="nave_menu">
+					<nav class="navbar navbar-default">
+					  <div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						  <a class="navbar-brand" href="#">
+							<div class="logo">
+								<img src="images/logo.png" alt="" />
+							</div>
+						  </a>
+						</div>
 
-        <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-3">
-            <a class="navbar-brand " href="{% url 'home' %}"><h4>Charity bank</h4></a>
-        </div>
-          <ul class="nav nav-pills" style="width:55%">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-          <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">Reports</a>
-            </li>
-          <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">Payment</a>
-            </li>
-          <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">Contact Us</a>
-            </li>
-          <div class="col-md-1"></div>
-            {% if request.user.is_authenticated %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
-              </li>
-            {% else %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
-              </li>
-            {% endif %}
-          </ul>
-        </div>
-      </nav>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+						  <ul class="nav navbar-nav navbar-right">
+							<li class=""><a href={% url 'home' %}>Home</a></li>
+							<li><a href={% url 'funds:list' %}>Funds</a></li>
+							<li><a href={% url 'cases:list' %}>Portfolio</a></li>
+{#							<li><a href="#contact">Contact</a></li>#}
+                            {% if request.user.is_authenticated %}
+              <li><a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a></li>
+              <li><a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a></li>
+                            {% else %}
+              <li><a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a></li>
+              <li><a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a></li>
+                            {% endif %}
+						  </ul>
+						</div><!-- /.navbar-collapse -->
+					  </div><!-- /.container-fluid -->
+					</nav>
+					</div>
+				</div><!--End of row -->
+
+			</div><!--End of container -->
+
+		</div>
+	</header> <!--End of header -->
 
 
 
@@ -83,9 +91,8 @@
         <p>Use this document as a way to quick start any new project.</p>
       {% endblock content %}
 
+<!--
 
-
-    <!-- footer -->
     <footer class="bg-dark text-white mt-4">
         <div class="container-fluid">
             <div class="row">
@@ -97,15 +104,13 @@
                         <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Payment</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
-                    <!-- TWITTER VK FB -->
+
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- footer -->
-
-
+      -->
     {% block modal %}{% endblock modal %}
 
     <!-- Le javascript
@@ -113,13 +118,43 @@
     <!-- Placed at the end of the document so the pages load faster -->
     {% block javascript %}
       <!-- Required by Bootstrap v4 Alpha 4 -->
-      <script src={% static "js/jquery.js" %} ></script>
-      <script src={% static "js/popper.js" %}></script>
-      <script src={% static "js/bootstrap.js" %}></script>
-
-      <script src="{% static 'js/project.js' %}"></script>
-
-
+{#      <script src={% static "js/jquery/jquery.js" %} ></script>#}
+{#      <script src={% static "js/popper.js" %}></script>#}
+{#      <script src={% static "js/bootstrap/bootstrap.js" %}></script>#}
+{##}
+{#      <script src="{% static 'js/project.js' %}"></script>#}
+{##}
+{#    <script type="text/javascript" src={% static "js/jquery/jquery.js"%}></script>#}
+{##}
+{#	<script type="text/javascript" src={% static "js/script.js"%}></script>#}
+{##}
+{#	<script type="text/javascript" src={% static "js/bootstrap/bootstrap.min.js"%}></script>#}
+{##}
+{#	<script type="text/javascript" src={% static "js/fancybox/jquery.fancybox.pack.js"%}></script>#}
+{##}
+{#	<script type="text/javascript" src={% static "js/nivo-lightbox/nivo-lightbox.min.js"%}></script>#}
+{##}
+{#	<script type="text/javascript" src={% static "js/owl-carousel/owl.carousel.min.js"%}></script>#}
+{##}
+{##}
+{##}
+{##}
+{##}
+{#	<script type="text/javascript" src={% static "js/jquery-easing/jquery.easing.1.3.js"%}></script>#}
+{#	<script type="text/javascript" src={% static "js/wow/wow.min.js"%}></script>#}
+{#	<!--<script type="text/javascript" src="js/counterup/counterup.min.js"%}></script>-->#}
+{##}
+{#	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>-->#}
+{#	<!--<script type="text/javascript" src="js/counterup/jquery.counterup.min.js"></script>-->#}
+{##}
+{##}
+{#	<script type="text/javascript" src={% static "js/isotop/isotope.min.js"%}></script>#}
+{#	<script type="text/javascript" src={% static "js/isotop/isotop.function.js"%}></script>#}
+{##}
+{#	<script type="text/javascript" src={% static "js/masonry/masonry.min.js"%}></script>#}
+{##}
+{#	<script type="text/javascript" src={% static "js/mixitup/jquery.mixitup.min.js"%}></script>#}
+{#	<script type="text/javascript" src={% static "js/masonry/masonry.pkgd.min.js"%}></script>#}
     {% endblock javascript %}
   </body>
 </html>

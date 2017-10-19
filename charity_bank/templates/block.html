@@ -1,46 +1,58 @@
-{% extends 'base.html' %}
+
 {% block content %}
 
 
-    <!-- Bootstrap CSS -->
+
+    <section id="block" class="case_list_block" style="padding: 25px">
+        <div class="container">
         <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <div class="card-block">
-                <img src="http://www.cmu.edu/academics/images/earth-east-600-min.jpg" class="rounded float-left" alt="..." height="300" width="300" style="padding:10px 10px">
-                <h4 class="card-title text-center">Title </h4>
-                <div class="card-block" style="padding: 5px 10px ">
-                    <p class="small"> Some quick example text to build on the card title
-                            and make up the bulk of the card's content.</p>
-                    <div class="progress bg-black" style="padding: 3px 2px">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width : 60%"></div>
-            <!--    <span class="sr-only"></span> -->
-                    </div>
-                    <div class="row" style="padding: 3px 1px">
-                        <div class="col">
-                            <p class=""style="padding: 1px;margin:0px">100000</p>
-                            <span class="badge badge-pill badge-dark font-weight-normal" style="padding:3px 3px">Our contribution</span>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <img src="{{ case.bg_photo.url }}" class="rounded float-left" alt="..." height="280" width="300" style="padding:10px 10px">
+            <div class="col-md-7">
+            <div class="card-block" style="padding: 10px 20px">
+            <h4 class="card-title text-center">{{ case.title }} </h4>
+                <div class="card-block main-block" style="padding: 5px 0px ">
+                    <p class="small"> {{ case.sub_header }}</p>
+                    <div class="row">
+                    <table class="table text-center" style="margin: 0px 0px">
+                    <tbody>
+                      <tr>
+                          <td>Total:</td>
+                          <td>{{ case.required_sum }} T</td>
+                      </tr>
+                    </tbody></table></div>
+
+                    <div class="card-block" style="padding: 0px 20px">
+                        <div class="row">
+                        <div class="col-md-5">
+                        <img src="{{ case.fund.logo.url }}" class="rounded float-left" alt="..." height="75" width="100">
                         </div>
-                        <div class="col">
-                        <p style="padding: 1px;margin:0px" >1000000</p>
-                        <span class="badge badge-pill badge-dark font-weight-normal small">Total</span>
+                            <div class="col-md-7">
+
+                        <h6 class="card-title text-center">{{ case.fund.title }}</h6>
+                        <div class="card-block" style="padding: 0px">
+                            <h6 class="text-center small">{{ case.fund.info }}</h6>
+                            <h6 class="text-center small"> 19 August 2017 </h6>
                         </div>
+
+                            </div>
+
+                                </div>
+                        <div class="card-footer text-center" style="padding: 5px 20px">
+                    <a href="{% url "cases:detail" case.id %}" class="btn btn-primary btn" style="margin-top: 10px" >Read about it</a>
                     </div>
 
-                    <div class="card-block" style="margin-top:3px; padding: 0px 20px">
-                        <img src="http://www.cmu.edu/academics/images/earth-east-600-min.jpg" class="rounded float-left" alt="..." height="75" width="100">
-                        <h6 class="card-title text-center">Company name </h6>
-                        <div class="card-block">
-                            <h6 class="text-center small">Name Surname </h6>
-                            <h6 class="text-center small">Date </h6>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="card-footer text-center" style="background-color: white; padding: 5px 20px">
-                    <a href="#" class="btn btn-primary" >Read about it</a>
+            </div>
+
+
+
                 </div>
             </div>
         </div>
     </div>
+        </div>
+    </section>
 {% endblock content%}

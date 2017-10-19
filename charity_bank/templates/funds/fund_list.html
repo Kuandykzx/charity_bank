@@ -1,26 +1,75 @@
 {% extends "base.html" %}
-{%  block content %}
 {% load static i18n %}
+{%  block content %}
+
+    	<link rel="stylesheet" href={% static 'css/funds/fund_list_style.css' %}>
 
 
-    {% for fund in fund_list %}
-        <div class="row" style="padding-bottom: 5px">
-            <div class="col-sm-12 col-md-3"></div>
-            <div class="col-sm-12 col-md-3">
-            <img class="" src="{{ fund.logo.url }}" style="height: 45%;" alt="">
+    <section class="fund_list">
 
+        {% for fund in fund_list %}
+
+        {%  if forloop.counter|divisibleby:2 %}
+
+            <div class="col-md-1"></div>
+            <div class="col-md-5 no-padding lib-item" data-category="ui">
+                <div class="lib-panel">
+                    <div class="row box-shadow">
+                        <div class="col-md-6">
+                            <img class="lib-img" src="{{ fund.logo.url }}" style="height: 250px;width: 250px">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="lib-row lib-header">
+                                <h2>{{ fund.title }}</h2> dasas
+                                <div class="lib-header-seperator"></div>
+                            </div>
+                            <div class="lib-row lib-desc">
+                                <p>{{ fund.info }}</p>
+                                <p>{{ fund.email }}</p>
+                                <p>{{ fund.address }}</p>
+                                <p>{{ fund.phone }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-12 col-md-4">
-                <h4 class=""><br/>{{ fund.title }}</h4>
-                <p class="">{{fund.info|linebreaksbr}}</p>
-                <a href="{%url "funds:fund_detail" fund.id %}" class="btn btn-primary ">Explore</a>
-                <br/>
+            </div></div>
+            <hr>
+        {% else  %}
+            <div class="container" style=" padding-top: 20px">
+            <div class="row">
+            <div class="col-md-5 no-padding lib-item" data-category="view">
+                <div class="lib-panel">
+                    <div class="row box-shadow">
+                        <div class="col-md-6">
+                            <img class="lib-img-show" src="{{ fund.logo.url }}" style="height: 250px;width: 250px">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="lib-row lib-header">
+                                <h2>{{ fund.title }}</h2>
+                                <div class="lib-header-seperator"></div>
+                            </div>
+                            <div class="lib-row lib-desc">
+                                <p>{{ fund.info }}</p>
+                                <p>{{ fund.email }}</p>
+                                <p>{{ fund.address }}</p>
+                                <p>{{ fund.phone }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
-        </div>
-
+        {% endif %}
 
     {% endfor %}
+
+        {% if fund_list.count|divisibleby:2 %}
+
+        {% else  %}
+            </div></div>
+        {% endif %}
+
+    </section>
+
 
 {%   endblock content %}

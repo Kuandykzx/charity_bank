@@ -1,0 +1,441 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{%  block content %}
+
+
+<body>
+
+	<section id="banner" class="banner" style="background-image: url({% static 'images/bg.jpg)'%}">
+		<div class="container"  >
+			<div class="row">
+				<div class="main_banner_area text-center">
+					<div class="col-md-12 col-sm-12">
+						<div class="single_banner_text wow zoomIn" data-wow-duration="1s">
+							<h1>CHARITY BANK - </h1>
+							<h1>PLATFORM FOR HELP</h1>
+
+							<div class="separetor"></div>
+						</div>
+					</div>
+
+
+					<div class="scrolldown">
+						<a href="#abouts" class="scroll_btn"></a>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</section><!-- End of Banner Section -->
+
+
+	<section id="abouts" class="abouts">
+		<div class="container">
+			<div class="row">
+				<div class="main_abouts_content">
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="single_abouts wow fadeInLeft" data-wow-duration="1s">
+							<h2>ABOUT CHARITY BANK</h2>
+							<div class="separetor2"></div>
+							<p>In gnissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+
+{#							<a href="" class="btn pink-btn">LERAN MORE !</a>#}
+						</div>
+					</div>
+
+
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="single_abouts wow fadeInRight" data-wow-duration="1s">
+							<img src={% static 'images/handheart.png' %}  />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+    <!--
+	<section id="wedo">
+		<div class="container">
+			<div class="row">
+				<div class="head_title text-center wow fadeIn" data-wow-duration="1.5s">
+					<h2>WHAT WE DO</h2>
+					<div class="separetor"></div>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been the industry's standard dummy text </p>
+				</div>
+				<div class="wedo_content_area">
+
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="single_wedo wow fadeIn" data-wow-duration="1s">
+							<div class="single_left_icon">
+								<a href=""><i class="fa fa-star"></i></a>
+							</div>
+
+							<div class="single_right_text">
+								<h4>UI / UX DESIGN</h4>
+								<div class="separetor2"></div>
+								<p>Lorem Ipsum is simply dummy text thprinting andthe industry's standard dummy text lorem Ipsum is simply dummy</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="single_wedo wow fadeIn" data-wow-duration="1s">
+							<div class="single_left_icon">
+								<a href=""><i class="fa fa-star"></i></a>
+							</div>
+
+							<div class="single_right_text">
+								<h4>UI / UX DESIGN</h4>
+								<div class="separetor2"></div>
+								<p>Lorem Ipsum is simply dummy text thprinting andthe industry's standard dummy text lorem Ipsum is simply dummy</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="single_wedo wow fadeIn" data-wow-duration="1s">
+							<div class="single_left_icon">
+								<a href=""><i class="fa fa-star"></i></a>
+							</div>
+
+							<div class="single_right_text">
+								<h4>UI / UX DESIGN</h4>
+								<div class="separetor2"></div>
+								<p>Lorem Ipsum is simply dummy text thprinting andthe industry's standard dummy text lorem Ipsum is simply dummy</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="single_wedo wow fadeIn" data-wow-duration="1s">
+							<div class="single_left_icon">
+								<a href=""><i class="fa fa-star"></i></a>
+							</div>
+
+							<div class="single_right_text">
+								<h4>UI / UX DESIGN</h4>
+								<div class="separetor2"></div>
+								<p>Lorem Ipsum is simply dummy text thprinting andthe industry's standard dummy text lorem Ipsum is simply dummy</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    -->
+
+	<section id="counterUp" class="counterUp">
+		<div class="counter_overlay">
+			<div class="container">
+				<div class="row">
+					<div class="main_counter_content">
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="sinle_counter wow fadeIn" data-wow-duration="1s">
+								<h4><i class="fa fa-star"></i><span class="static-counter">158</span></h4>
+								<p>TOTAL FUNDS</p>
+								<div class="separetorwhite"></div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="sinle_counter wow fadeIn" data-wow-duration="1.8s">
+								<h4><i class="fa fa-star"></i><span class="static-counter">580</span></h4>
+								<p>ACTIVE PROJECTS</p>
+								<div class="separetorwhite"></div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="sinle_counter wow fadeIn" data-wow-duration="2.2s">
+								<h4><i class="fa fa-star"></i><span class="static-counter">1500</span></h4>
+								<p>PROJECTS FUNDED</p>
+								<div class="separetorwhite"></div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="sinle_counter wow fadeIn" data-wow-duration="2.8s">
+								<h4><i class="fa fa-star"></i><span class="static-counter">1000</span></h4>
+								<p>PEOPLE FUNDED</p>
+								<div class="separetorwhite"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="steps" class="steps">
+		<div class="container">
+			<div class="row">
+			<div class="head_title text-center wow fadeIn" data-wow-duration="1.5s">
+					<h2>THREE SIMPLE STEPS</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been the industry's standard dummy text </p>
+				</div>
+
+            <div class="row">
+					<div class="col-md-4">
+						<div class="single_steps text-center ">
+							<a href=""><i class="fa fa-money"></i></a>
+							<h4>DONATE</h4>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single_steps text-center">
+							<a href=""><i class="fa fa-thumbs-up"></i></a>
+							<h4>VOTE</h4>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single_steps text-center">
+							<a href=""><i class="fa fa-heart"></i></a>
+							<h4>HELP</h4>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+						</div>
+					</div>
+			</div>
+
+
+			</div>
+		</div>
+	</section>
+
+	<!--<section id="featured" class="featured">
+		<div class="container">
+			<div class="row">
+				<div class="head_title text-center wow flipInX" data-wow-duration="1s">
+					<h2>OUR FEATURED WORK</h2>
+					<div class="separetor"></div>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been the industry's standard dummy text</p>
+				</div>
+			</div>
+		</div>
+		<div class="main_featured_content">
+			<div class="col-md-4 col-sm-6 col-xs-12 single_featured_area">
+				<div class="single_featured wow fadeIn" data-wow-duration=".5s">
+					<img src="images/f1.jpg" alt="" />
+					<div class="featured_overlay">
+						<div class="overlay_content">
+							<a href="" class="btn btn-white">VIEW DEATIL</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-12 single_featured_area">
+				<div class="single_featured wow fadeIn" data-wow-duration=".5s">
+					<img src="images/f2.jpg" alt="" />
+					<div class="featured_overlay">
+						<div class="overlay_content">
+							<a href="" class="btn btn-white">VIEW DEATIL</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-12 single_featured_area">
+				<div class="single_featured wow fadeIn" data-wow-duration=".5s">
+					<img src="images/f3.jpg" alt="" />
+					<div class="featured_overlay">
+						<div class="overlay_content">
+							<a href="" class="btn btn-white">VIEW DEATIL</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+-->
+
+	<section id="service" class="service">
+		<div class="container">
+			<div class="row">
+				<div class="head_title text-center wow zoomIn" data-wow-duration="0.5s">
+					<h2>OUR BEST SERVICE</h2>
+					<div class="separetor"></div>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been the industry's standard dummy text</p>
+				</div>
+			</div>
+		</div>
+
+        {% for case in case_list %}
+
+            {% if forloop.counter < 3 %}
+            {% include 'block.html' %}
+            {% endif %}
+        {% endfor %}
+
+
+	</section>
+
+
+	<section id="business" class="business">
+		<div class="overlay_business">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="main_business_content text-center wow fadeIn" data-wow-duration="2s">
+							<h2>EXPLORE ALL OUR PROJECTS</h2>
+							<a href="" class="btn pink-btn">EXPLORE MORE</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="subcribs" class="subcribs">
+		<div class="counter_overlay">
+			<div class="container">
+				<div class="row">
+					<div class="main_subcribs_content">
+						<div class="col-md-6 col-sm-12 col-xs-12">
+							<div class="single_subcribs wow slideInLeft" data-wow-duration="1s">
+								<h4>SUBSCRIBE TO UPDATE</h4>
+								<div class="separetorwhite"></div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12 col-xs-12">
+							<div class="single_subcribs_right wow slideInRight" data-wow-duration="1s">
+								<input type="text" placeholder="Enter email address" id="sb_text"/>
+								<input type="submit" value="SUBSCRIBE" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!--<section id="blog" class="blog sections">
+		<div class="container">
+			<div class="row">
+				<div class="head_title text-center wow zoomIn" data-wow-duration="0.5s">
+					<h2>LATTEST BLOG</h2>
+					<div class="separetor"></div>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been the industry's standard dummy text</p>
+				</div>
+				<div class="main_blog">
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="single_blog wow fadeInLeft" data-wow-duration="0.5s">
+							<div class="single_blog_img">
+								<img src="images/blog1.jpg" alt="" />
+							</div>
+
+							<div class="single_blog_overlay">
+								<h4>THE WINTER TAL’S</h4>
+								<p>Raf Redwan</p>
+								<div class="separetorwhite"></div>
+
+								<p>Lorem ipsum dol. Ut enim minim veniam, qub e eu fugiat anim id est</p>
+								<a href="" class="date_data"><i class="fa fa-gift"></i>12 th September, 2015</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="single_blog wow fadeInRight" data-wow-duration="0.5s">
+							<div class="single_blog_img">
+								<img src="images/blog1.jpg" alt="" />
+							</div>
+
+							<div class="single_blog_overlay">
+								<h4>THE WINTER TAL’S</h4>
+								<p>Raf Redwan</p>
+								<div class="separetorwhite"></div>
+
+								<p>Lorem ipsum dol. Ut enim minim veniam, qub e eu fugiat anim id est</p>
+								<a href="" class="date_data"><i class="fa fa-gift"></i>12 th September, 2015</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+
+
+
+		<!-- Contact form -->
+		<section id="contact" class="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<div class="head_title text-center wow zoomIn" data-wow-duration="0.5s">
+							<h2>Get In Touch With Us</h2>
+							<div class="separetor"></div>
+							<p>We are here to help. Want to learn more about our services? Please get in touch, we'd love to hear from you!</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="message_contant">
+						<div class="col-md-7 col-sm-7">
+							<div class="single_message_left wow fadeIn" data-wow-duration="1s">
+								<form action="#" id="formid">
+										<!--<div class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">-->
+
+										 <div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="name" placeholder="first name" required="">
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="email" class="form-control" name="email" placeholder="Email" required="">
+												</div>
+											</div>
+										 </div>
+
+
+
+										  <div class="form-group">
+											<textarea class="form-control" name="message" rows="8" placeholder="Message"></textarea>
+										  </div>
+
+										  <div class="center-content">
+											<input type="submit" value="SUBMIT NOW" class="btn btn-lg">
+										  </div>
+										<!--</div>-->
+								</form>
+							</div>
+						</div>
+
+						<div class="col-md-5 col-sm-5">
+							<div class="single_message_right wow fadeIn" data-wow-duration="1s">
+
+								<p>
+									<i class="fa fa-map-marker"></i>
+                                    Beibitshilik st 38
+									<span>Astana, Kazakhstan</span>
+								</p>
+								<p><i class="fa fa-envelope-o"></i>Info@charity.com</p>
+								<p><i class="fa fa-phone"></i>+7 777 111 22 33</p>
+
+							</div>
+						</div>
+					</div> <!-- End of messsage contant-->
+				</div>
+			</div>
+		</section>
+
+
+
+	<!-- STRAT SCROLL TO TOP -->
+
+	<div class="scrollup">
+		<a href="#"><i class="fa fa-chevron-up"></i></a>
+	</div>
+
+
+{% endblock content %}

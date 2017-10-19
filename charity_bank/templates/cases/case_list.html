@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block additional_css %}
+            <link rel="stylesheet" href={% static 'css/cases/case_detail_style.css' %}>
+
+{% endblock %}
+
+
+{%  block content %}
+
+
+    <div class="row" style="padding-top: 80px "></div>
+
+    {% for case in case_list %}
+
+        {% include 'block.html' %}
+
+    {% endfor %}
+
+{%   endblock content %}
+</body>
