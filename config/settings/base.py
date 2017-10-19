@@ -8,6 +8,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
 import environ
+import os
 
 ROOT_DIR = environ.Path(__file__) - 3  # (charity_bank/config/settings/base.py - 3 = charity_bank/)
 APPS_DIR = ROOT_DIR.path('charity_bank')
@@ -49,6 +50,8 @@ THIRD_PARTY_APPS = [
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
+    'adminsortable2',  # sortable list in admin
+
 ]
 
 # Apps specific for this project go here.
@@ -56,6 +59,7 @@ LOCAL_APPS = [
     # custom users app
     'charity_bank.users.apps.UsersConfig',
     'charity_bank.funds.apps.FundsConfig',
+    'charity_bank.cases.apps.CasesConfig',
     # Your stuff: custom apps go here
 ]
 
@@ -202,6 +206,7 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
+ALLOWED_HOSTS = ['localhost', 'cdfa7646.ngrok.io']
 
 # MEDIA CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -278,3 +283,21 @@ ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+
+# TinyMCE configurations
+TINYMCE_DEFAULT_CONFIG = {
+    'mode': 'exact',
+    'theme': 'advanced',
+    'relative_urls': False,
+    'width': 600,
+    'height': 300,
+    'plugins': 'table,advimage,advlink,inlinepopups,preview,media,searchreplace,contextmenu,paste,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras',
+    'theme_advanced_buttons1': 'fullscreen,|,bold,italic,underline,strikethrough,|,sub,sup,|,bullist,numlist,|,outdent,indent,|,formatselect,removeformat',
+    'theme_advanced_buttons2': 'cut,copy,paste,pastetext,pasteword,|,search,replace,|,undo,redo,|,link,unlink,anchor,image,media,charmap,|,visualchars,nonbreaking',
+    'theme_advanced_buttons3': 'visualaid,tablecontrols,|,blockquote,del,ins,|,preview,code',
+    'theme_advanced_toolbar_location': 'top',
+    'theme_advanced_toolbar_align': 'left',
+    'content_css': '/media/css/tinymce.css',
+    'extended_valid_elements': 'noindex',
+    'custom_elements': 'noindex',
+}

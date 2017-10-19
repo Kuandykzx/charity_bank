@@ -15,7 +15,7 @@ class Fund(models.Model):
     phone = models.CharField(_('phone'), validators=[phone_regex], max_length=15, blank=True)
 
     def get_absolute_url(self):
-        return reverse('fund-detail', kwargs={'pk': self.pk})
+        return reverse('fund_detail', kwargs={'pk': self.pk})
 
     def __str__(self):
         return self.title

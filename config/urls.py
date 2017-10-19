@@ -4,23 +4,25 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
+from charity_bank.cases.views import CaseListView
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
+    url(r'^$', CaseListView.as_view(template_name='pages/homegraxpo.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
+    url(r'^contact/$', TemplateView.as_view(template_name='pages/contact.html'), name='contact'),
 
     # Django Admin, use {% url 'admin:index' %}
     url(settings.ADMIN_URL, admin.site.urls),
 
     # User management
+    url(r'^cases/', include('charity_bank.cases.urls', namespace='cases')),
     url(r'^users/', include('charity_bank.users.urls', namespace='users')),
     url(r'^funds/', include('charity_bank.funds.urls', namespace='funds')),
     url(r'^accounts/', include('allauth.urls')),
 
     # Your stuff: custom urls includes go here
 
-
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
